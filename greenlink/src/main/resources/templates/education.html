@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLink - Educație</title>
+</head>
+<body>
+<header>
+    <h1>Cursuri Educaționale</h1>
+    <a href="/">Înapoi acasă</a>
+</header>
+<main>
+    <ul>
+        <li th:each="course : ${courses}">
+            <a th:href="@{/education/course/{id}(id=${course.id})}" th:text="${course.title}">Titlu curs</a>
+        </li>
+    </ul>
+</main>
+<footer>
+    <p>&copy; 2024 GreenLink</p>
+</footer>
+</body>
+</html>

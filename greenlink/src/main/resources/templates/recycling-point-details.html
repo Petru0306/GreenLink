@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLink - Detalii Reciclare</title>
+</head>
+<body>
+<header>
+    <h1>Detalii Punct de Reciclare</h1>
+    <a href="/recycling">Înapoi la Reciclare</a>
+</header>
+<main>
+    <h2 th:text="${recyclingPoint.name}">Nume punct</h2>
+    <p th:text="${recyclingPoint.address}">Adresă punct</p>
+    <p>Materiale acceptate:</p>
+    <ul>
+        <li th:each="material : ${recyclingPoint.materialsAccepted}" th:text="${material}">Material</li>
+    </ul>
+</main>
+<footer>
+    <p>&copy; 2024 GreenLink</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLink - Marketplace</title>
+</head>
+<body>
+<header>
+    <h1>Marketplace</h1>
+    <a href="/">Înapoi acasă</a>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>Produs</th>
+            <th>Descriere</th>
+            <th>Preț</th>
+            <th>Detalii</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.name}">Nume produs</td>
+            <td th:text="${product.description}">Descriere produs</td>
+            <td th:text="${product.price}">Preț produs</td>
+            <td><a th:href="@{/marketplace/{id}(id=${product.id})}">Detalii</a></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<footer>
+    <p>&copy; 2024 GreenLink</p>
+</footer>
+</body>
+</html>

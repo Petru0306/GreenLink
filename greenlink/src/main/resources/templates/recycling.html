@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLink - Reciclare</title>
+</head>
+<body>
+<header>
+    <h1>Puncte de Reciclare</h1>
+    <a href="/">Înapoi acasă</a>
+</header>
+<main>
+    <ul>
+        <li th:each="point : ${recyclingPoints}">
+            <a th:href="@{/recycling/point/{id}(id=${point.id})}" th:text="${point.name}">Nume punct</a>
+        </li>
+    </ul>
+</main>
+<footer>
+    <p>&copy; 2024 GreenLink</p>
+</footer>
+</body>
+</html>

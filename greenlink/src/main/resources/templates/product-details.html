@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLink - Detalii Produs</title>
+</head>
+<body>
+<header>
+    <h1>Detalii Produs</h1>
+    <a href="/marketplace">Înapoi la Marketplace</a>
+</header>
+<main>
+    <h2 th:text="${product.name}">Nume produs</h2>
+    <p th:text="${product.description}">Descriere produs</p>
+    <p>Preț: <span th:text="${product.price}">Preț</span></p>
+</main>
+<footer>
+    <p>&copy; 2024 GreenLink</p>
+</footer>
+</body>
+</html>
